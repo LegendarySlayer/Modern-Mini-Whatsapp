@@ -1,0 +1,217 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* BASE & TYPOGRAPHY */
+body {
+  background: #121212; /* dark mode base */
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 20px;
+  user-select: none;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  color: #00ffcc;
+  font-weight: 900;
+  text-shadow: 0 0 8px #00ffcc88;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+/* BUTTONS */
+.btn {
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 12px 28px;
+  text-transform: uppercase;
+  box-shadow:
+    2px 2px 6px #00ffccaa,
+    inset -2px -2px 6px #00ccaaee;
+  background: linear-gradient(145deg, #00ffcc, #00ccaa);
+  color: #121212;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover, .btn:focus {
+  background: linear-gradient(135deg, #00ddbb, #00ffaa);
+  box-shadow: 0 0 15px #00ffaa, inset 0 0 8px #00ccaa;
+  color: #fff;
+  outline: none;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  margin-top: 16px;
+}
+
+/* LAYOUT CONTAINERS */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* CHAT CARD */
+.chat-card {
+  background: linear-gradient(145deg, #1f1f1f, #292929);
+  border-radius: 20px;
+  box-shadow:
+    8px 8px 16px #0d0d0d,
+    -8px -8px 16px #393939;
+  padding: 24px 32px;
+  margin-bottom: 36px;
+  position: relative;
+  user-select: text;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  color: #99c8b1;
+  font-weight: 600;
+}
+
+.chat-header span {
+  color: #00ffcc;
+  font-weight: 700;
+}
+
+.chat-message {
+  background: #00ffcc22;
+  padding: 20px 28px;
+  border-radius: 28px 28px 28px 6px;
+  font-size: 1.1rem;
+  color: #00ffcccc;
+  box-shadow: inset 3px 3px 7px #00ffccaa;
+  max-width: 70%;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  user-select: text;
+}
+
+/* FOOTER: Timestamp + Buttons */
+.chat-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #666;
+  user-select: none;
+}
+
+.chat-footer time {
+  opacity: 0.7;
+}
+
+/* BUTTON GROUP */
+.chat-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.chat-actions form {
+  margin: 0;
+}
+
+/* FORM STYLING */
+.form-container {
+  background: linear-gradient(145deg, #292929, #1f1f1f);
+  max-width: 600px;
+  margin: 0 auto 48px;
+  padding: 36px 40px;
+  border-radius: 24px;
+  box-shadow:
+    10px 10px 24px #0f0f0f,
+    -10px -10px 24px #3a3a3a;
+  user-select: text;
+}
+
+.chat-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #00ffcc;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+.chat-form input,
+.chat-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  background: #121212;
+  border: 2px solid #00ffcc;
+  border-radius: 14px;
+  color: #eee;
+  font-size: 1rem;
+  font-weight: 500;
+  resize: vertical;
+  box-shadow:
+    inset 4px 4px 8px #00ccaa88,
+    inset -4px -4px 8px #00ffccbb;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-form input::placeholder,
+.chat-form textarea::placeholder {
+  color: #00ccaaaa;
+}
+
+.chat-form input:focus,
+.chat-form textarea:focus {
+  outline: none;
+  border-color: #00ffaa;
+  box-shadow: 0 0 12px #00ffaaee, inset 0 0 10px #00ffaaee;
+  background: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .chat-message {
+    max-width: 100%;
+  }
+
+  .chat-card {
+    padding: 20px 24px;
+  }
+
+  .form-container {
+    padding: 24px 28px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
