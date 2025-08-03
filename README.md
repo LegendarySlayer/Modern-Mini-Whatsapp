@@ -34,16 +34,6 @@ A real-time chat application inspired by WhatsApp, built with a modern, glowing 
 
 ---
 
-## 📸 Screenshots
-
-*(It's highly recommended to add a screenshot of your application here to showcase the UI)*
-
-<p align="center">
-  <img src="YOUR_SCREENSHOT_URL_HERE" alt="Application Screenshot" width="600"/>
-</p>
-
----
-
 ## 🚀 Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
